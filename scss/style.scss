@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../../app/images/banner.png),#1c1c1c98 0% 0% no-repeat padding-box;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+}
+nav {
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  background: black;
+  height: 70px;
+  width: 100%
+
+}
+nav .nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 147px;
+  width: 50%;
+  
+}
+
+.logo {
+  background: url(../images/logo.png);
+  height: 52px;
+  width: 119px;
+  top: 10px;
+  margin-left: 147px;
+}
+
+.nav a{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+.nav  a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.nav a::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: crimson;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transition: 0.5s;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+nav a:hover {
+  color: orange;
+}
+#burger {
+  display: none;
+  transition: 0.3s;
+}
+.rotate {
+  transform: rotateZ(-90deg);
+}
+.side-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 60vh;
+  width: 200px;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.side-nav.translate {
+  transform: translateX(0);
+}
+@media (max-width: 768px){
+  #burger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    height: auto;
+  }
+
+  nav .nav .link {
+    display: none;
+  }
+}
+.features1 .img {
+  background: url(../../app/images/cheshire-county-hygiene-services@2x.png);
+  background-repeat: no-repeat;
+  width: 247px;
+  height: 100px;
+  margin-bottom: 22px;
+}
+.features2 {
+  background: url(../../app/images/features2_white_u72.png);
+  background-repeat: no-repeat;
+  width: 84px;
+  height: 22px;
+  margin-top: 21px;
+  margin-bottom: 24px;
+}
+.features1 p {
+  color: #FFFFFF;
+}
+.features1 h1 {
+  color: #FFFFFF;
+  width: 90%;
+}
+.features1 .btn {
+  color: #FFFFFF;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  outline: none;
+  width: 135px;
+  height: 42px;
+  margin-top: 43px;
+}
+.features1 .btn:hover {
+  color: black;
+  background: #FFFFFF;
+  transition: 0.5s;
+}
+.features-footer {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px #00000080;
+  height: 105px;
+}
+.features-footer p {
+  color: #86878B;
+  margin-top: 5px;
+  width: 80%;
+}
+.features-footer h2 {
+  color: #333333;
+}
+.features-footer .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 150px;
+}
+.features-footer .icons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
+}
+.features-main {
+  display: flex;
+  justify-content: space-between;
+}
+.features1 .intro {
+  margin-left: 150px;
+  margin-top: 400px;
+  width: 650px;
+}
+.features1 .form {
+  display: flex;
+  flex-direction: column;
+  top: 147px;
+  left: 892px;
+  height: 425px;
+  width: 360px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  margin-top: 75px;
+  margin-right: 150px;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 5px 20px #00000029;
+  opacity: 1;
+}
+
+.form h1 {
+  background: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+  color: #333333;
+  font-size: 20px;
+  padding: 17px 50px;
+  width: auto;
+  height: 60px;
+  border-radius: 5px;
+}
+.form span {
+  color: #E27866;
+}
+.form h2 {
+  color: #1C1C1C;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.form-input {
+  margin: 30px 50px 0 50px;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  outline: none;
+}
+.form-input::placeholder {
+  color: #D8D8D8;
+  font-size: 15px;
+}
+input[type="radio"] {
+  appearance: none;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+  accent-color: #41D395;
+  border: 1px solid #41D395;
+  position: relative;
+}
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #41D395;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0);
+  transition: 0.3s;
+}
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+#get-started {
+  justify-self: flex-end;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: $green;
+  width: 100%;
+}
+label {
+  margin: 0 17px 0 5px;
+  opacity: 0.5;
+}
+.radio-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: black;
+  font-size: 10px;
+  margin: 18px 18px 20px 50px;
+}
+.features1 input[type="submit"] {
+  color: #FFFFFF;
+  background: #41D395;
+  font-size: 18px;
+  width: 360px;
+  height: 70px;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+}
+.features1 input[type="submit"]:hover {
+  background: #196646;
+  transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .features1 {
+    flex-direction: column;
+    padding: 60px 30px;
+    align-items: center;
+    height: 120vh;
+  }
+}
+.features-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 100px 15px 100px;
+  width: 100%;
+  gap: 10%;
+
+  .text {
+    width: 35%;
+
+    p {
+      padding-top: 5px;
+    }
+  }
+  .icons {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+
+    img{
+      width: 30px;
+      height: 30px;
+
+      &:hover {
+        background: rgba(240, 227, 227, 0.473);
+      }
+    }
+  }
+}
+.tab1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: url(../app/images/photo-1480714378408-67cf0d13bc1b.png), linear-gradient(270deg, rgba(102, 150, 226, 0.42), rgba(226, 120, 102, 0.42));
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 595px;
+
+}
+.tab1 button {
+  display: flex;
+  flex-direction: column;
+  margin: 21px;
+  margin-left: 150px;
+  background: #A37169;
+  width: 100px;
+  height: 100px;
+  border: none;
+  box-shadow: 0px 3px 6px #00000029;
+}
